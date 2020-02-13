@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">RockPaperScissorsLab2</string>
     <string name="action_settings">Settings</string>
+    <string name="rock">Rock</string>
+    <string name="paper">Paper</string>
+    <string name="scissors">Scissors</string>
 </resources>

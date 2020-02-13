@@ -69,9 +69,89 @@ public class MainActivity extends AppCompatActivity {
                 result = "Paper wraps Rock! Computer wins!";
                 computerCount++;
                 break;
-            default:
-                result = "Rock beats Scissors! You win!";
+            case SCISSORS:
+                result = "Rock beats scissors! You win!";
                 playerCount++;
+                break;
+            default:
+                result = "Invalid response received..";
+                playerCount++;
+                break;
+        }
+
+        TextView t = (TextView) findViewById(R.id.scoreTextView);
+
+        output += "Computer Score: " + computerCount + ", Player's Score: " + playerCount + "\nPlayer Weapon: " + playerWeapon.toString();
+        output += "\nComputer Weapon: " + computerWeapon.toString() + "\n" + result;
+
+        t.setText(output);
+
+
+
+    }
+
+    public void scissorsClicked(View v) {
+
+        playerWeapon = Weapon.SCISSORS;
+        computerWeapon = Weapon.getRandomWeapon();
+
+        String weapon = computerWeapon.toString();
+        String result = "Test";
+        String output = "";
+
+        switch (computerWeapon) {
+
+            case ROCK:
+                result = "Rock beats scissors. You lose!";
+                computerCount++;
+                break;
+            case PAPER:
+                result = "Scissors beats paper! You win!";
+                playerCount++;
+                break;
+            case SCISSORS:
+                result = "You both played scissors! It's a draw!";
+                break;
+            default:
+                result = "Invalid response received...";
+                break;
+        }
+
+        TextView t = (TextView) findViewById(R.id.scoreTextView);
+
+        output += "Computer Score: " + computerCount + ", Player's Score: " + playerCount + "\nPlayer Weapon: " + playerWeapon.toString();
+        output += "\nComputer Weapon: " + computerWeapon.toString() + "\n" + result;
+
+        t.setText(output);
+
+
+
+    }
+
+    public void paperClicked(View v) {
+
+        playerWeapon = Weapon.PAPER;
+        computerWeapon = Weapon.getRandomWeapon();
+
+        String weapon = computerWeapon.toString();
+        String result = "Test";
+        String output = "";
+
+        switch (computerWeapon) {
+
+            case ROCK:
+                result = "Paper beats rock. You win!";
+                playerCount++;
+                break;
+            case PAPER:
+                result = "You both played Paper! It's a draw!";
+                break;
+            case SCISSORS:
+                result = "Scissors beats paper! You lose!";
+                computerCount++;
+                break;
+            default:
+                result = "Invalid response received...";
                 break;
         }
 

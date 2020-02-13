@@ -28,19 +28,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="rockClicked"
-            android:text="Rock" />
+            android:text="@string/rock" />
 
         <Button
             android:id="@+id/paperButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Paper" />
+            android:onClick="paperClicked"
+            android:text="@string/paper" />
 
         <Button
             android:id="@+id/scissorsButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Scissors" />
+            android:onClick="scissorsClicked"
+            android:text="@string/scissors" />
 
         <TextView
             android:id="@+id/scoreTextView"
